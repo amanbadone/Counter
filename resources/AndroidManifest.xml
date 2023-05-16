@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" package="com.myshotcount.app.android" platformBuildVersionCode="28" platformBuildVersionName="9">
+    <uses-sdk android:minSdkVersion="28" android:targetSdkVersion="28"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <application android:theme="@style/AppTheme.ObjectDetection" android:label="@string/tfe_od_app_name" android:icon="@mipmap/ic_launcher" android:allowBackup="false" android:supportsRtl="true" android:extractNativeLibs="false" android:roundIcon="@mipmap/ic_launcher_round" android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <activity android:label="@string/tfe_od_app_name" android:name="com.myshotcount.app.android.detection.DetectorActivity" android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="1"/>
+    </application>
+</manifest>
